@@ -7,6 +7,7 @@ from data import getSpeakerData, getFileList, getSpeakerLikelihood
 
 header = st.container()
 st.sidebar.title('Settings')
+print('1')
 with header:
     st.image(IMAGE_PATH)  
     st.divider()
