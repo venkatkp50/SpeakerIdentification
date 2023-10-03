@@ -10,7 +10,7 @@ def getSpeakerData():
     return pd.Series(os.listdir(DATA_PATH))
 
 def getFileList(speaker):
-    filelist = glob.glob(os.path.join(DATA_PATH,speaker)+'\*.wav')    
+    filelist = glob.glob(os.path.join(DATA_PATH,speaker,'/')+'*.wav')    
     return filelist
 
 def extract_mfcc(audio_file, num_features=13):
