@@ -12,7 +12,7 @@ temp_dir = tempfile.TemporaryDirectory()
 temp_dir_path = temp_dir.name
 
 header = st.container()
-st.sidebar.title('Settings')
+st.sidebar.title('')
 # print('1')
 with header:
     st.image(banner_image)  
