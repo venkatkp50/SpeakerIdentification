@@ -252,7 +252,6 @@ python-ptrace==0.9.8
 python-speech-features==0.6
 pytorch_revgrad==0.2.0
 pytz==2023.3
-pywin32==306
 PyYAML==5.4.1
 pyyaml_env_tag==0.1
 pyzmq==25.0.2
