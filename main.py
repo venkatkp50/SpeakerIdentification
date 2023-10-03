@@ -1,9 +1,14 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
+import tempfile
+import os
 
 from config import IMAGE_PATH,FILE_TAXONOMY
 from data import getSpeakerData, getFileList, getSpeakerLikelihood
+
+temp_dir = tempfile.TemporaryDirectory()
+temp_dir_path = temp_dir.name
 
 header = st.container()
 st.sidebar.title('Settings')
