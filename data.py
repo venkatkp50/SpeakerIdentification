@@ -11,9 +11,9 @@ def getSpeakerData():
     return pd.Series(os.listdir(DATA_PATH))
 
 def getFileList(speaker):
-    st.write(os.path.join(DATA_PATH,speaker))
+    # st.write(os.path.join(DATA_PATH,speaker))
     filelist = glob.glob(os.path.join(DATA_PATH,speaker)+'/*.wav')   
-    st.write(len(filelist))
+    # st.write(len(filelist))
     return filelist
 
 def extract_mfcc(audio_file, num_features=13):
@@ -35,9 +35,9 @@ def speaker_recognition(audio_file, gmm_model):
 def getSpeakerLikelihood(testFile):
     speaker_list = []
     likelihood_list = []
-    st.write(testFile)
+    # st.write(testFile)
     for speaker_name in os.listdir(DATA_PATH):
-        st.write(speaker_name)
+        # st.write(speaker_name)
         model_file_to_load = f"{speaker_name}_model.pkl"
         loaded_model = load_gmm_model(model_file_to_load)
         likelihood = speaker_recognition(testFile, loaded_model)
