@@ -179,9 +179,6 @@ numba==0.57.0
 numpy==1.23.5
 nvidia-ml-py==11.525.112
 oauthlib==3.2.2
-onnx==1.14.0
-onnxruntime==1.14.1
-onnxruntime-tools==1.7.0
 openai-whisper==20230314
 opencensus==0.11.2
 opencensus-context==0.1.3
