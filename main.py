@@ -9,7 +9,7 @@ header = st.container()
 st.sidebar.title('Settings')
 print('1')
 with header:
-    st.image(IMAGE_PATH)  
+    # st.image(IMAGE_PATH)  
     st.divider()
     option1 = st.selectbox('Speaker',getSpeakerData())
     option2 = st.selectbox('Files',getFileList(option1))
