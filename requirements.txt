@@ -321,7 +321,6 @@ tox==4.5.1
 tqdm==4.65.0
 traitlets==5.9.0
 transformer-smaller-training-vocab==0.2.3
-transformers==4.29.1
 trio==0.22.0
 trio-websocket==0.10.2
 typer==0.7.0
