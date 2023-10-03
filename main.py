@@ -3,10 +3,11 @@ import numpy as np
 import pandas as pd
 import tempfile
 import os
-
+from PIL import Image
 from config import IMAGE_PATH,FILE_TAXONOMY
 from data import getSpeakerData, getFileList, getSpeakerLikelihood
 
+banner_image = Image.open(IMAGE_PATH)
 temp_dir = tempfile.TemporaryDirectory()
 temp_dir_path = temp_dir.name
 
@@ -14,7 +15,7 @@ header = st.container()
 st.sidebar.title('Settings')
 # print('1')
 with header:
-    # st.image(IMAGE_PATH)  
+    st.image(banner_image)  
     st.divider()
     st.header('Input')
     predictedSpeaker = ''
