@@ -11,7 +11,8 @@ def getSpeakerData():
     return pd.Series(os.listdir(DATA_PATH))
 
 def getFileList(speaker):
-    filelist = glob.glob(os.path.join(DATA_PATH,speaker,'/')+'*.wav')   
+    st.write(os.path.join(DATA_PATH,speaker))
+    filelist = glob.glob(os.path.join(DATA_PATH,speaker)+'/*.wav')   
     st.write(len(filelist))
     return filelist
 
