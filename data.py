@@ -19,7 +19,8 @@ def extract_mfcc(audio_file, num_features=13):
   return mfcc_features
 
 def load_gmm_model(model_file):
-    with open(MODEL_PATH + '\' +model_file, 'rb') as file:
+    # with open(MODEL_PATH + '\' +model_file, 'rb') as file:
+    with open(MODEL_PATH + '/' +model_file, 'rb') as file:
         gmm_model = pickle.load(file)
     return gmm_model
 
