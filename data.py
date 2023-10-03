@@ -5,6 +5,7 @@ import glob
 import pickle
 import scipy.io.wavfile as wav
 from python_speech_features import mfcc
+import streamlit as st
 
 def getSpeakerData():
     return pd.Series(os.listdir(DATA_PATH))
@@ -32,9 +33,9 @@ def speaker_recognition(audio_file, gmm_model):
 def getSpeakerLikelihood(testFile):
     speaker_list = []
     likelihood_list = []
-
+    st.write(testFile)
     for speaker_name in os.listdir(DATA_PATH):
-        print(speaker_name)
+        st.write(speaker_name)
         model_file_to_load = f"{speaker_name}_model.pkl"
         loaded_model = load_gmm_model(model_file_to_load)
         likelihood = speaker_recognition(testFile, loaded_model)
