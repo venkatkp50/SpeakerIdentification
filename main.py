@@ -19,7 +19,7 @@ with st.sidebar:
     # st.write(x)
     # st.write(y)
     dg = pd.DataFrame({'Speaker':x,'Test Files':y})
-    # # st.bar_chart(data=dg,x='Speaker',y='Test Files')
+    st.bar_chart(data=dg,x='Speaker',y='Test Files')
     
 
 with header:
