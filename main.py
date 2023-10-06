@@ -36,11 +36,13 @@ with header:
         uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=False,type=(["wav"]))
         if uploaded_files is not None:
             with open(os.path.join(temp_dir_path, uploaded_files.name), "wb") as f:
-                f.write(uploaded_files.read())
+                audio_bytes = uploaded_files.read()
+                f.write(audio_bytes)
             df = getSpeakerLikelihood(os.path.join(temp_dir_path, uploaded_files.name))
             speakerIdx = np.argmax(df['likelihood'])
             predictedSpeaker = df.loc[speakerIdx][0]
             speakerScore = df.loc[speakerIdx][1]
+            st.audio(audio_bytes, format='audio/ogg')
 
     st.divider()
     st.header('Result')
