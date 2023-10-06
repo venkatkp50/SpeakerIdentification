@@ -14,7 +14,7 @@ temp_dir_path = temp_dir.name
 header = st.container()
 with st.sidebar:
     st.title('Training Data')
-    # st.divider()
+    st.divider()
     # x,y = populateGraph()
     # # dg = pd.DataFrame({'Speaker':x,'Test Files':y})
     # # st.bar_chart(data=dg,x='Speaker',y='Test Files')
