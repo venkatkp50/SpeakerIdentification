@@ -16,6 +16,8 @@ with st.sidebar:
     st.title('Training Data')
     st.divider()
     x,y = populateGraph()
+    st.write(x)
+    st.write(y)
     # # dg = pd.DataFrame({'Speaker':x,'Test Files':y})
     # # st.bar_chart(data=dg,x='Speaker',y='Test Files')
     
