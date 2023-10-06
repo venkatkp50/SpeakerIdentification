@@ -10,6 +10,12 @@ import streamlit as st
 def getSpeakerData():
     return pd.Series(os.listdir(DATA_PATH))
 
+def populateGraph():
+    fileCount =[]
+    for speaker in os.listdir(DATA_PATH):
+        fileCount.append(len(getFileList(speaker)))
+    return os.listdir(DATA_PATH),fileCount
+
 def getFileList(speaker):
     # st.write(os.path.join(DATA_PATH,speaker))
     filelist = glob.glob(os.path.join(DATA_PATH,speaker)+'/*.wav')   
