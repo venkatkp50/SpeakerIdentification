@@ -5,7 +5,7 @@ import tempfile
 import os
 from PIL import Image
 from config import IMAGE_PATH,FILE_TAXONOMY
-from data import getSpeakerData, getFileList, getSpeakerLikelihood
+from data import getSpeakerData, getFileList, getSpeakerLikelihood,populateGraph
 
 banner_image = Image.open(IMAGE_PATH)
 temp_dir = tempfile.TemporaryDirectory()
